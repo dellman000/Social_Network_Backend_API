@@ -27,6 +27,15 @@ const userSchema = new Schema({
         Ref: 'User'
     }]
 })
+
+userSchema.pre('remove', async function(next) { 
+    // Find all thoughts associated with the user and remove them
+    await this.thoughts.deleteMany({ username: this.username });
+  
+    next();
+  });
+
+
 userSchema.virtual('friendCount').get(() => {
     return this.friends.length
 })
