@@ -5,7 +5,7 @@ const { log } = console
 router.get('/users', async (req, res) => {
     try {
         log("hello")
-        const allUsers = await User.find({})
+        const allUsers = await User.find({}).populate('friends')
         res.json(allUsers)
     } catch (error) {
         log(error)
@@ -16,7 +16,7 @@ router.get('/users', async (req, res) => {
 router.get('/users/:id', async (req, res) => {
     try {
         log("hello")
-        const oneUser = await User.findById(req.params.id)
+        const oneUser = await User.findById(req.params.id).populate('friends')
         res.json(oneUser)
     } catch (error) {
         log(error)
