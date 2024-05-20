@@ -13,7 +13,8 @@
 Make a Social Media API with the data stored in mongodb
 ## Installation
 Clone the repository and type npm i. Then type npm start
-## Usage
+## Usage  
+a link to a video on how to use it https://drive.google.com/file/d/1x4IlEGX0Kh2LjYzgbTVBcknv-0D3KtGK/view
 ![alt text](image.png)
 ## Credits
 Kendell Rennie 
